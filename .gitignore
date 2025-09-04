@@ -1,0 +1,17 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Prisma
+prisma/migrations/
+
+# Arquivos de ambiente
+.env
+
+# VS Code
+.vscode/
+
+# Logs
+logs/
+*.log
