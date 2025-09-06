@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerenciamento Escolar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>Gerenciamento Escolar</header>
+
+  <h2>Cadastro de Aluno</h2>
+  <form id="form-aluno">
+    <input type="hidden" id="aluno-id">
+    <label>Nome:</label>
+    <input type="text" id="aluno-nome" required>
+    <label>Email:</label>
+    <input type="email" id="aluno-email" required>
+    <label>Idade:</label>
+    <input type="number" id="aluno-idade" required>
+    <button type="submit">Cadastrar / Atualizar Aluno</button>
+  </form>
+
+  <h3>Lista de Alunos</h3>
+  <table id="tabela-alunos">
+    <thead>
+      <tr>
+        <th>ID</th><th>Nome</th><th>Email</th><th>Idade</th><th>Matricula</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>Cadastro de Professor</h2>
+  <form id="form-professor">
+    <input type="hidden" id="professor-id">
+    <label>Nome:</label>
+    <input type="text" id="professor-nome" required>
+    <label>Email:</label>
+    <input type="email" id="professor-email" required>
+    <label>Idade:</label>
+    <input type="number" id="professor-idade" required>
+    <button type="submit">Cadastrar / Atualizar Professor</button>
+  </form>
+
+  <h3>Lista de Professores</h3>
+  <table id="tabela-professores">
+    <thead>
+      <tr>
+        <th>ID</th><th>Nome</th><th>Email</th><th>Idade</th><th>Disciplina</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
