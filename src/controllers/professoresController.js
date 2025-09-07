@@ -29,11 +29,16 @@ exports.criarProfessor = async (req, res) => {
 
 exports.atualizarProfessor = async (req, res) => {
   const { id } = req.params;
-  const { nome, email } = req.body;
+  const { nome, email, idade, disciplina } = req.body;
   try {
     const professorAtualizado = await prisma.professor.update({
       where: { id: parseInt(id) },
-      data: { nome, email }
+      data: {
+        nome: nome,
+        email: email,
+        idade: parseInt(idade),
+        disciplina: disciplina
+      }
     });
     res.json(professorAtualizado);
   } catch (error) {

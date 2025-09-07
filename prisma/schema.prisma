@@ -7,18 +7,22 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model aluno {
+model Aluno {
   id        Int    @id @default(autoincrement())
   nome      String
-  matricula String
   email     String @unique
   idade     Int
+  matricula String
+
+  @@map("alunos")
 }
 
-model professor {
+model Professor {
   id         Int    @id @default(autoincrement())
   nome       String
-  disciplina String
-  idade      Int
   email      String @unique
+  idade      Int
+  disciplina String
+
+  @@map("professores")
 }

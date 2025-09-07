@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Gerenciamento Escolar</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Gerenciamento Escolar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
   <header>Gerenciamento Escolar</header>
@@ -19,14 +20,14 @@
   <input type="number" id="aluno-idade" name="idade" required>
   <label>Matricula:</label>
   <input type="text" id="aluno-matricula" name="matricula" required>
-  <button type="submit">Cadastrar / Atualizar Aluno</button>
+  <button type="submit">Cadastrar Aluno</button>
 </form>
 
   <h3>Lista de Alunos</h3>
   <table id="tabela-alunos">
     <thead>
       <tr>
-        <th>ID</th><th>Nome</th><th>Email</th><th>Idade</th><th>Matricula</th>
+        <th>ID</th><th>Nome</th><th>Email</th><th>Idade</th><th>Matricula</th><th>Ações</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -47,14 +48,14 @@
     <label for="professor-disciplina">Disciplina:</label>
     <input type="text" id="professor-disciplina" name="disciplina" required>
 
-    <button type="submit">Cadastrar / Atualizar Professor</button>
+    <button type="submit">Cadastrar Professor</button>
   </form>
 
   <h3>Lista de Professores</h3>
   <table id="tabela-professores">
     <thead>
       <tr>
-        <th>ID</th><th>Nome</th><th>Email</th><th>Idade</th><th>Disciplina</th>
+        <th>ID</th><th>Nome</th><th>Email</th><th>Idade</th><th>Disciplina</th><th>Ações</th>
       </tr>
     </thead>
     <tbody></tbody>
