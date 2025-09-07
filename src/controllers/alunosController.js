@@ -1,4 +1,4 @@
-import prisma from "../prisma";
+const prisma = require('../prisma.js');
 
 exports.criarAluno = async (req, res) => {
   try {
