@@ -33,12 +33,18 @@
   <h2>Cadastro de Professor</h2>
   <form id="form-professor">
     <input type="hidden" id="professor-id">
-    <label>Nome:</label>
-    <input type="text" id="professor-nome" required>
-    <label>Email:</label>
-    <input type="email" id="professor-email" required>
-    <label>Idade:</label>
-    <input type="number" id="professor-idade" required>
+    <label for="professor-nome">Nome:</label>
+    <input type="text" id="professor-nome" name="nome" required>
+
+    <label for="professor-email">Email:</label>
+    <input type="email" id="professor-email" name="email" required>
+
+    <label for="professor-idade">Idade:</label>
+    <input type="number" id="professor-idade" name="idade" required>
+
+    <label for="professor-disciplina">Disciplina:</label>
+    <input type="text" id="professor-disciplina" name="disciplina" required>
+
     <button type="submit">Cadastrar / Atualizar Professor</button>
   </form>
 

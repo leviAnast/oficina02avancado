@@ -18,7 +18,7 @@ model Aluno {
 model Professor {
   id    Int    @id @default(autoincrement())
   nome  String
-  Disciplina String
+  disciplina String
   idade Int
   email String @unique
 }
