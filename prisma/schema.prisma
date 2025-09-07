@@ -8,17 +8,17 @@ datasource db {
 }
 
 model aluno {
-  id    Int    @id @default(autoincrement())
-  nome  String
+  id        Int    @id @default(autoincrement())
+  nome      String
   matricula String
-  email String @unique
-  idade Int
+  email     String @unique
+  idade     Int
 }
 
 model professor {
-  id    Int    @id @default(autoincrement())
-  nome  String
+  id         Int    @id @default(autoincrement())
+  nome       String
   disciplina String
-  idade Int
-  email String @unique
+  idade      Int
+  email      String @unique
 }

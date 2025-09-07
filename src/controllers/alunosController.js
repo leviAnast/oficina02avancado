@@ -2,20 +2,24 @@ const prisma = require('../prisma.js');
 
 exports.criarAluno = async (req, res) => {
   try {
-    const { nome, email, idade, matricula} = req.body;
+    const { nome, email, idade, matricula } = req.body;
+    console.log('Dados recebidos no backend:', req.body);
+
     const novoAluno = await prisma.aluno.create({
       data: { 
         nome, 
         email, 
         idade: parseInt(idade, 10),
         matricula
-    }
+      }
     });
     res.status(201).json(novoAluno);
   } catch (error) {
+    console.error('Erro ao criar aluno:', error);
     res.status(400).json({ error: 'Erro ao criar aluno' });
   }
 };
+
 
 exports.listarAlunos = async (req, res) => {
   try {
@@ -29,7 +33,7 @@ exports.listarAlunos = async (req, res) => {
 exports.atualizarAluno = async (req, res) => {
   try {
     const { id } = req.params;
-    const { nome, email, idade } = req.body;
+    const { nome, email, idade, matricula } = req.body;
 
     const alunoAtualizado = await prisma.aluno.update({
       where: { id: parseInt(id, 10) },
