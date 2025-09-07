@@ -104,15 +104,14 @@ function configurarFormularioAluno() {
         event.preventDefault();
 
         const formData = new FormData(formAluno);
-        const dados = new URLSearchParams(formData); // Mantém x-www-form-urlencoded
+        const dados = new URLSearchParams(formData);
 
         const alunoId = document.querySelector('#aluno-id').value;
         const url = alunoId ? `/api/alunos/${alunoId}` : '/api/alunos';
-        const metodo = alunoId ? 'PUT' : 'POST'; // 🔹 Corrige o método
 
         try {
             const response = await fetch(url, {
-                method: metodo,
+                method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
@@ -120,8 +119,8 @@ function configurarFormularioAluno() {
             });
 
             if (response.ok) {
-                formAluno.reset();
-                carregarAlunos();
+                formAluno.reset();     
+                carregarAlunos();     
                 alert(alunoId ? 'Aluno atualizado com sucesso!' : 'Aluno cadastrado com sucesso!');
             } else {
                 const erro = await response.json();
@@ -134,5 +133,4 @@ function configurarFormularioAluno() {
         }
     });
 }
-
 
